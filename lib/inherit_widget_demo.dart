@@ -121,7 +121,6 @@ class ListViewHttpInheritDemoState extends State<ListViewHttpDemo> {
   void getData() async {
     List<DataModel> listDate = await HttpUtils.getListData();
     if(listDate.length > 0) {
-      InheritedWidgetModel ddd = InheritedWidgetModel.of(context);
       InheritedWidgetModel.of(context).listDate = listDate;
       if(mounted) {
         setState(() {});
@@ -140,16 +139,7 @@ class CustomInheritGridView extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Center(
-      child: GridView(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 1,
-            childAspectRatio: 2.1,
-            mainAxisSpacing: 16.0,
-            crossAxisSpacing: 10.0
-        ),
-        children: CustomGridViewDemo.getGridView(
-            InheritedWidgetModel.of(context) == null ? null : InheritedWidgetModel.of(context).listDate),
-      ),
+      child: CustomGridViewDemo.getGridView(InheritedWidgetModel.of(context).listDate),
     );
   }
 }

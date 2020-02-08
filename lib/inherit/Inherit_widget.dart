@@ -16,6 +16,7 @@ class InheritedWidgetModel extends InheritedWidget {
 
   @override
   bool updateShouldNotify(InheritedWidgetModel oldWidget)  {
+    print('updateShouldNotify');
     bool flag = listDate != oldWidget.listDate;
     return flag;
   }
