@@ -6,6 +6,7 @@ import 'package:flutter_demo/flex_demo.dart';
 import 'package:flutter_demo/grid_view.dart';
 import 'package:flutter_demo/list_view.dart';
 import 'package:flutter_demo/navigationBar_demo.dart';
+import 'package:flutter_demo/opacity_demo.dart';
 import 'package:flutter_demo/rich_text.dart';
 import 'package:flutter_demo/state_manager.dart';
 import 'package:flutter_demo/wrap_demo.dart';
@@ -16,7 +17,8 @@ import 'inherit_widget_demo.dart';
 
 //void main() => runApp(NavigationBarDemo());
 //void main() => runApp(ListViewDemo());
-void main() => runApp(InheritDemo());
+//void main() => runApp(InheritDemo());
+void main() => runApp(OpacityDemo());
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
